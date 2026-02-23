@@ -65,7 +65,7 @@ body {
   justify-content: flex-end;
 }
 .right-links a:hover {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .nav-link {
@@ -84,10 +84,6 @@ body {
   text-decoration: underline;
 }
 
-.active:hover {
-  color: var(--secondary);
-}
-
 .btn {
   background-color: var(--primary);
   color: var(--white);
@@ -100,7 +96,7 @@ body {
 
 .btn:hover {
   background-color: var(--secondary);
-  color: var(--white);
+  color: var(--white) !important;
   text-decoration: none;
 }
 
