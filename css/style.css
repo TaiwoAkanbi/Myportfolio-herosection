@@ -64,6 +64,9 @@ body {
   flex-wrap: wrap;
   justify-content: flex-end;
 }
+.right-links a:hover {
+  color: var(--secondary);
+}
 
 .nav-link {
   color: var(--black);
