@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-  width: min(1100px, 100%);
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -77,6 +77,10 @@ body {
   color: var(--secondary);
   text-decoration: underline;
 }
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
 
 .active {
   color: var(--primary);
@@ -114,6 +118,8 @@ body {
   text-align: center;
   padding: 72px 0 40px;
   gap: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-section h1 {
@@ -180,6 +186,19 @@ body {
     width: min(240px, 90vw);
     z-index: 10;
   }
+  .right-links.open-icon a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+  }
+  .right-links.open-icon li {
+    width: 100%;
+  }
+
+  .right-links.open-icon a:hover {
+    background: rgba(27, 75, 22, 0.08);
+    text-decoration: none;
+  }
 
   .right-links.open-icon .btn {
     width: 100%;
@@ -203,5 +222,126 @@ body {
   .second-image {
     left: 80px;
     top: 50px;
+  }
+}
+
+.about-page {
+  background-color: var(--primary);
+  padding-top: 40px;
+
+  margin-top: -120px;
+  position: relative;
+  z-index: 2;
+
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+.about-contents {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 32px;
+  color: white;
+  position: relative;
+}
+.describe-me {
+  max-width: 500px;
+}
+.my-image {
+  width: 400px;
+  height: 400px;
+  background-color: var(--white);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.my-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.about-btn {
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: 8px 24px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  width: 180px;
+  font-weight: 600;
+}
+
+.about-btn:hover {
+  background-color: #ccf3b5;
+  color: var(--primary);
+  text-decoration: none;
+}
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+.about-me h3 {
+  font-weight: 600;
+  font-size: 28px;
+}
+.decor {
+  width: 400px;
+  height: 400px;
+  border-radius: 400px;
+  background-color: var(--secondary);
+  position: absolute;
+  right: -120px;
+  top: -120px;
+  z-index: 10;
+  opacity: 0.2;
+}
+
+@media (max-width: 480px) {
+  .about-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    color: white;
+  }
+
+  .about-me h3 {
+    display: block;
+  }
+  .describe-me {
+    display: block;
+  }
+  .about-btn {
+    display: block;
+  }
+
+  .my-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .describe-me {
+    text-align: center;
+  }
+  .decor {
+    width: 200px;
+    height: 200px;
+
+    top: -60px;
+    right: -60px;
+
+    opacity: 0.15;
   }
 }
