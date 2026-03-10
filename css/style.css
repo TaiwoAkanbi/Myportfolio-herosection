@@ -4,6 +4,7 @@
   --accent: #f2b50b;
   --white: #ffffff;
   --black: #242424;
+  --muted: rgba(36, 36, 36, 0.7);
 }
 
 * {
@@ -246,7 +247,7 @@ h2 {
 }
 .describe-me {
   max-width: 500px;
-  text-align:left;
+  text-align: left;
 }
 .my-image {
   width: 400px;
@@ -347,55 +348,153 @@ h2 {
   }
 }
 .projects-phase {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap:32px;
+  gap: 32px;
 }
-.project1-image{
-  width:50%;
-  height:auto;
+.project1-image {
+  width: 50%;
+  height: auto;
 }
 .project1-image img {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 .project-description {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  gap:32px;
+  gap: 32px;
 }
 .app-btn {
   background-color: #ccf3b5;
-  width:150px;
-  height:50px;
-  border:none;
-  border-radius:50%;
-  color:var(--primary);
-
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  color: var(--primary);
 }
-.app-title{
+.app-title {
   font-size: 24px;
   font-weight: 600;
-  width:350px;
+  width: 350px;
   text-align: left;
 }
-.project h3,p {
+.project h3,
+.project p {
   text-align: center;
 }
-.project h3{
-   font-weight: 600;
+.project h3 {
+  font-weight: 600;
   font-size: 28px;
-  padding-top:40px;
+  padding-top: 40px;
 }
-.project p{
-  padding-bottom:40px;
+.project p {
+  padding-bottom: 40px;
 }
 .project-description a {
-  color:var(--primary);
-  transition:color 0.3s ease;
+  color: var(--primary);
+  transition: color 0.3s ease;
 }
 .project-description a:hover {
-  color:var(--secondary);
+  color: var(--secondary);
+}
+.contact {
+  margin-top: 40px;
+}
+.contact h2 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.contact p {
+  max-width: 60ch;
+  margin: 0 auto 80px;
+  color: var(--muted);
+}
+.contact-form {
+  display: flex;
+  padding: 20px 10px;
+  background-color: whitesmoke;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 48px;
+  border-radius: 24px;
+}
+.form1 form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+form input,
+form textarea {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border: 1px solid #abf582;
+  border-radius: 4px;
+}
+input:focus,
+textarea:focus {
+  background-color: #f0f6ed;
+  border: 1px solid #abf582;
+}
+.form1 {
+  max-width: 450px;
+}
+
+.form2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: flex-start;
+}
+form ::placeholder {
+  color: #48a111;
+}
+.my-links {
+  list-style: none;
+  margin-top: 12px;
+}
+.link svg {
+  width: 22px;
+  height: 22px;
+  color: var(--primary);
+}
+.link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.link a {
+  color: var(--primary);
+  text-decoration: none;
+}
+.message-button {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 4px;
+  border: none;
+  font-weight: 700;
+}
+.connect {
+  font-weight: 600;
+  font-size: 28px;
+  padding-top: 40px;
+}
+.connect-paragraph {
+  color: var(--muted);
+  margin: 0 auto 40px !important;
+}
+@media (max-width: 480px) {
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .form1 {
+    width: 100%;
+  }
 }
