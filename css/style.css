@@ -413,9 +413,12 @@ h2 {
 .project-description a:hover {
   color: var(--secondary);
 }
-.contact {
-  margin-top: 40px;
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .contact h2 {
   text-align: center;
   margin-bottom: 8px;
@@ -425,53 +428,32 @@ h2 {
   margin: 0 auto 80px;
   color: var(--muted);
 }
-.contact-form {
-  display: flex;
-  padding: 20px 10px;
-  background-color: whitesmoke;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 48px;
-  border-radius: 24px;
-  flex-wrap: wrap;
-}
-.form1 form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
+.contact {
+  background-color: var(--primary);
+  color: white;
+  margin-top: 40px;
 }
 
-input:focus,
-textarea:focus {
-  background-color: #f0f6ed;
-  border: 1px solid #abf582;
-}
-.form1 {
-  max-width: 450px;
-  flex: 1 1 400px;
+.contact-form {
+  padding: 20px 10px;
+  border-radius: 24px;
+  color: white;
 }
 
 .form2 {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  justify-content: flex-start;
-  flex: 1 1 400px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
 }
-.form1 form input,
-.form1 form textarea {
-  width: 100%;
-  padding: 12px 16px;
-  margin-bottom: 12px;
-  border: 1px solid #abf582;
-  border-radius: 4px;
-}
-form ::placeholder {
-  color: #48a111;
-}
+
 .my-links {
   list-style: none;
   margin-top: 12px;
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
 }
 .link svg {
   width: 22px;
@@ -481,7 +463,18 @@ form ::placeholder {
 .link {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
+  background-color: #f4f9f2;
+  padding: 8px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 .link a {
   color: var(--primary);
@@ -506,23 +499,17 @@ form ::placeholder {
   padding-top: 40px;
 }
 .connect-paragraph {
-  color: var(--muted);
+  color: white !important;
   margin: 0 auto 40px !important;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+.form2 h4 {
+  font-size: 14px;
+  font-weight: 300;
 }
 @media (max-width: 768px) {
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    padding: 16px;
-    align-items: center;
-  }
-
-  .form1,
-  .form2 {
-    flex: 1 1 100%;
-    max-width: 450px;
-  }
   .my-links {
     list-style: none;
     margin-top: 12px;
@@ -534,7 +521,10 @@ form ::placeholder {
     max-width: 450px;
     text-align: center;
   }
-
+  .link {
+    width: 100%;
+    justify-content: center;
+  }
   .link a {
     font-size: 16px;
   }
