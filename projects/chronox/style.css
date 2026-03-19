@@ -6,6 +6,9 @@
   --black: #242424;
   --muted: rgba(36, 36, 36, 0.7);
 }
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   box-sizing: border-box;
@@ -347,13 +350,29 @@ body {
 .concluding-wrapper {
   background-color: var(--primary);
   color: white;
-  padding: 24px;
+  padding: 48px 20px;
+  text-align: center;
+}
+.conclusion {
+  max-width: 700px;
+  margin: 0 auto;
 }
 .conclusion h2 {
   text-align: center;
 }
 .reflection p {
   margin-bottom: 16px;
-  color: whitesmoke;
   line-height: 1.6;
+  color: whitesmoke;
+  text-align: left;
+}
+@media (max-width: 480px) {
+  .concluding-wrapper {
+    padding: 40px 16px;
+  }
+
+  .reflection p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
 }
