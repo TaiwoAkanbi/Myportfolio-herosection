@@ -365,6 +365,16 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 32px;
+  margin-bottom: 60px;
+  transition: transform 0.3s ease;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.projects-phase:hover {
+  transform: translateY(-5px);
+}
+.projects-phase.reverse {
+  flex-direction: row-reverse;
 }
 .project1-image {
   width: 50%;
@@ -382,16 +392,18 @@ h2 {
 }
 .app-btn {
   background-color: #ccf3b5;
-  width: 150px;
-  height: 50px;
-  border: none;
-  border-radius: 50%;
   color: var(--primary);
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  font-size: 12px;
+  width: fit-content;
 }
 .app-title {
   font-size: 24px;
   font-weight: 600;
-  width: 350px;
+  max-width: 45ch;
+  line-height: 1.6;
   text-align: left;
 }
 .project h3,
@@ -405,6 +417,10 @@ h2 {
 }
 .project p {
   padding-bottom: 40px;
+  max-width: 60ch;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  color: var(--muted);
 }
 .project-description a {
   color: var(--primary);
@@ -532,6 +548,28 @@ h2 {
     max-width: 90%;
     text-align: center;
     margin: 0 auto 24px;
+  }
+  .projects-phase,
+  .projects-phase.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+  .project p {
+    max-width: 90%;
+    padding: 0 10px;
+  }
+
+  .project1-image {
+    width: 100%;
+  }
+
+  .project-description {
+    align-items: center;
+  }
+
+  .app-title {
+    text-align: center;
+    max-width: 90%;
   }
 }
 
